@@ -1,10 +1,10 @@
-demo:
-  name: "demo dev"
+was-cluster-emb:
+  name: "was-cluster-emb dev"
   version: "0.0"
   fileupload: .
 spring:
   application:
-    name: demo
+    name: was-cluster-emb
 primary:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
