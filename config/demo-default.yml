@@ -5,12 +5,15 @@ demo:
 spring:
   application:
     name: demo
+  cloud:
+    config:
+      uri: http://lena-manager.lena.svc.cluster.local:7700/lena-embed-manager/config    
 primary:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://10.81.208.227:3306/demo?useUnicode=true&serverTimezone=Asia/Seoul
-    user: devon
-    password: devon1234
+    url: jdbc:mysql://172.31.1.131:3306/demo?useUnicode=true&serverTimezone=Asia/Seoul
+    user: root
+    password: "!Admin1234"
     initialization-mode: always
     sql-script-encoding: utf-8
     hibernate:
@@ -19,13 +22,27 @@ primary:
       maximum-pool-size: 5
 secondary:
   datasource:
-    driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://10.81.208.228:3301/demo
-    user: test1
-    password: test01
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://172.31.1.208:3306/demo?useUnicode=true&serverTimezone=Asia/Seoul
+    user: root
+    password: "!Admin1234"
     initialization-mode: always
     sql-script-encoding: utf-8
     hibernate:
-      dialect: org.hibernate.dialect.PostgreSQLDialect
+      #dialect: org.hibernate.dialect.PostgreSQLDialect
+      dialect: org.hibernate.dialect.MySQL5Dialec
     hikari:
       maximum-pool-size: 15
+server:
+  lena:
+    session:
+      enabled: true
+      primary-host: session-0.session.lena.svc.cluster.local
+      primary-port: 5180
+      secondary-host: session-1.session.lena.svc.cluster.local
+      secondary-port: 5180
+      external_session_store_enabled: true
+    stuckThread:
+      threshold: 1200
+    connector:
+      uri-encoding: UTF-8  
