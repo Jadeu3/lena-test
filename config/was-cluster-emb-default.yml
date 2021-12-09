@@ -1,5 +1,4 @@
-
-was-cluster-emb:
+demo:
   name: "was-cluster-emb default"
   version: "0.0"
   fileupload: .
