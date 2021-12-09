@@ -1,10 +1,28 @@
+
 was-cluster-emb:
   name: "was-cluster-emb dev"
   version: "0.0"
   fileupload: .
 spring:
+  cloud:
+    config:
+      uri: http://lena-manager.lena.svc.cluster.local:7700/lena-embed-manager/config
   application:
     name: was-cluster-emb
+server:
+  lena:
+    session:
+      enabled: true
+      primary-host: session-0.session.lena.svc.cluster.local
+      primary-port: 5180
+      secondary-host: session-1.session.lena.svc.cluster.local
+      secondary-port: 5180
+      external_session_store_enabled: true
+    stuckThread:
+      threshold: 1200
+    connector:
+      uri-encoding: UTF-8
+      use-body-encoding-for-uri: true    
 primary:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
