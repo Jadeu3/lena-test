@@ -42,3 +42,6 @@ server:
     connector:
       uri-encoding: UTF-8
       use-body-encoding-for-uri: true
+    valve:
+      class-name: argo.server.valves.StdoutAccessLogValve
+      
