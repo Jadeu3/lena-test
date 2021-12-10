@@ -45,4 +45,5 @@ server:
     stuckThread:
       threshold: 1200
     connector:
-      uri-encoding: UTF-8      
+      uri-encoding: UTF-8
+      use-body-encoding-for-uri: true
