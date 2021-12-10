@@ -2,12 +2,6 @@ demo:
   name: "demo dev"
   version: "0.0"
   fileupload: .
-spring:
-  application:
-    name: demo
-  cloud:
-    config:
-      uri: http://lena-manager.lena.svc.cluster.local:7700/lena-embed-manager/config    
 primary:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
