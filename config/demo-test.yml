@@ -37,7 +37,8 @@ server:
       secondary-port: 5180
       external_session_store_enabled: true
     stuckThread:
-      threshold: 1200
+      threshold: 10
+      interruptThreadThreshold: 5
     connector:
       uri-encoding: UTF-8
-      use-body-encoding-for-uri: false
+      use-body-encoding-for-uri: true
