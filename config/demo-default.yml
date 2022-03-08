@@ -11,18 +11,6 @@ spring:
 primary:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://54.180.96.0:3306/demo?useUnicode=true&serverTimezone=Asia/Seoul
-    user: root
-    password: "!Admin1234"
-    initialization-mode: always
-    sql-script-encoding: utf-8
-    hibernate:
-      dialect: org.hibernate.dialect.MySQL5Dialec
-    hikari:
-      maximum-pool-size: 5
-secondary:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://15.164.229.99:3306/demo?useUnicode=true&serverTimezone=Asia/Seoul
     user: root
     password: "!Admin1234"
@@ -33,6 +21,18 @@ secondary:
       dialect: org.hibernate.dialect.MySQL5Dialec
     hikari:
       maximum-pool-size: 15
+secondary:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://54.180.96.0:3306/demo?useUnicode=true&serverTimezone=Asia/Seoul
+    user: root
+    password: "!Admin1234"
+    initialization-mode: always
+    sql-script-encoding: utf-8
+    hibernate:
+      dialect: org.hibernate.dialect.MySQL5Dialec
+    hikari:
+      maximum-pool-size: 5
 server:
   lena:
 #     session:
