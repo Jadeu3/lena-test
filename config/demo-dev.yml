@@ -5,7 +5,7 @@ demo:
 primary:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://3.34.130.24:3306/demo?useUnicode=true&serverTimezone=Asia/Seoul
+    url: jdbc:mysql://54.180.96.0:3306/demo?useUnicode=true&serverTimezone=Asia/Seoul
     user: root
     password: "!Admin1234"
     initialization-mode: always
@@ -17,7 +17,7 @@ primary:
 secondary:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://3.34.136.195:3306/demo?useUnicode=true&serverTimezone=Asia/Seoul
+    url: jdbc:mysql://15.164.229.99:3306/demo?useUnicode=true&serverTimezone=Asia/Seoul
     user: root
     password: "!Admin1234"
     initialization-mode: always
@@ -29,13 +29,13 @@ secondary:
       maximum-pool-size: 15
 server:
   lena:
-    session:
-      enabled: true
-      primary-host: session-0.session.lena.svc.cluster.local
-      primary-port: 5180
-      secondary-host: session-1.session.lena.svc.cluster.local
-      secondary-port: 5180
-      external_session_store_enabled: true
+#     session:
+#       enabled: true
+#       primary-host: session-0.session.lena.svc.cluster.local
+#       primary-port: 5180
+#       secondary-host: session-1.session.lena.svc.cluster.local
+#       secondary-port: 5180
+#       external_session_store_enabled: true
     stuckThread:
       threshold: 1200
     connector:
