@@ -38,7 +38,7 @@ server:
 #       external_session_store_enabled: true
     stuckThread:
       threshold: 10
-      interruptThreadThreshold: 5
+      interruptThreadThreshold: 12
     connector:
       uri-encoding: UTF-8
       use-body-encoding-for-uri: true
